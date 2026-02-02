@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinetra Academy | Education for the Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .page { display: none; animation: fadeIn 0.5s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .nav-link { cursor: pointer; transition: 0.3s; }
+        .nav-link:hover { color: #f97316; }
+        .hero-bg { background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200'); background-size: cover; }
+    </style>
+</head>
+<body class="bg-gray-50">
+<div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-orange-500 z-[100] transition-all duration-100" style="width: 0%"></div>
+
+<script>
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("scrollProgress").style.width = scrolled + "%";
+});
+</script>
+
+
+<div class="h-20 bg-white"></div>
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black text-blue-900 nav-link" onclick="showPage('home')">
+                <font size ="6">TRI<span class="text-orange-500">NETRA</span> <span class="text-sm font-light text-gray-500 block leading-tight">ACADEMY</span></font>
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold text-gray-700">
+                <span class="nav-link" onclick="showPage('home')">Home</span>
+                <span class="nav-link" onclick="showPage('about')">About Us</span>
+                <span class="nav-link" onclick="showPage('courses')">Courses</span>
+                <span class="nav-link" onclick="showPage('admission')">Admission</span>
+                <span class="bg-orange-500 text-white px-5 py-2 rounded-full nav-link hover:bg-orange-600" onclick="showPage('contact')">Contact</span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home" class="page active">
+        <header class="hero-bg text-white py-24 px-6 text-center">
+            <h1 class="text-5xl font-extrabold mb-4">Master Professional Skills & Academics</h1>
+            <p class="text-xl mb-8 opacity-90">Digital Marketing | Tally | Coding | Class 6-12 Commerce</p>
+            <button onclick="showPage('courses')" class="bg-orange-500 px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition">Explore All Courses</button>
+	    <button onclick="showPage('contact')" class="bg-white/10 backdrop-blur-md border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">Contact Us</button>
+        </header>
+
+
+
+
+
+
+<section class="bg-blue-900 py-12 text-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="border-r border-blue-800 last:border-0">
+            <div class="text-4xl font-bold text-orange-400">500+</div>
+            <div class="text-xs uppercase tracking-widest opacity-80">Students Trained</div>
+        </div>
+        <div class="border-r border-blue-800 last:border-0">
+            <div class="text-4xl font-bold text-orange-400">15+</div>
+            <div class="text-xs uppercase tracking-widest opacity-80">Professional Courses</div>
+        </div>
+        <div class="border-r border-blue-800 last:border-0">
+            <div class="text-4xl font-bold text-orange-400">100%</div>
+            <div class="text-xs uppercase tracking-widest opacity-80">Practical Training</div>
+        </div>
+        <div>
+            <div class="text-4xl font-bold text-orange-400">10+</div>
+            <div class="text-xs uppercase tracking-widest opacity-80">Expert Faculty</div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Voices of Our Students</h2>
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-gray-50 p-10 rounded-3xl shadow-inner italic text-gray-700 relative border-l-8 border-orange-500">
+            <i class="fas fa-quote-left text-5xl text-gray-200 absolute top-4 left-4"></i>
+            <p class="relative z-10 text-xl leading-relaxed">
+                "The atmosphere at Trinetra Academy is amazing. I learned <strong>Digital Marketing and Canva</strong> here. The teachers explain everything practically, which made it very easy to understand even for a beginner like me!"
+            </p>
+            <div class="mt-8 flex items-center justify-end space-x-4">
+                <div class="text-right">
+                    <div class="font-bold text-blue-900 text-lg">Aditya Verma </div>
+                    <div class="text-sm text-orange-600 font-semibold">Digital Marketing Batch</div>
+                </div>
+                <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div>
+
+
+
+</div>
+
+
+
+
+        <section class="py-16 max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Join Trinetra?</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="p-6 bg-white rounded-xl shadow-sm text-center border-b-4 border-blue-600">
+                    <i class="fas fa-desktop text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold">Modern Lab</h3>
+                    <p class="text-sm text-gray-500">Practice on the latest software and high-speed PC's.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm text-center border-b-4 border-orange-500">
+                    <i class="fas fa-briefcase text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="font-bold">Job Skills</h3>
+                    <p class="text-sm text-gray-500">Learn Tally, Marketing & Design for the real world.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm text-center border-b-4 border-green-500">
+                    <i class="fas fa-graduation-cap text-3xl text-green-500 mb-4"></i>
+                    <h3 class="font-bold">Top Coaching</h3>
+                    <p class="text-sm text-gray-500">Excellence in Class 6-12 Commerce Subjects.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm text-center border-b-4 border-purple-500">
+                    <i class="fas fa-keyboard text-3xl text-purple-500 mb-4"></i>
+                    <h3 class="font-bold">Digital Literacy</h3>
+                    <p class="text-sm text-gray-500">Typing, MS Word, Excel, & Basic Computers.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+<section class="py-20 bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4">Your Path to Excellence</h2>
+            <p class="text-gray-600">How we turn your curiosity into professional mastery in 4 simple steps.</p>
+        </div>
+
+        <div class="relative">
+            <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-blue-100 -translate-y-1/2 z-0"></div>
+
+            <div class="grid md:grid-cols-4 gap-8 relative z-10">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center group hover:border-blue-500 transition-all">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Enrollment</h3>
+                    <p class="text-sm text-gray-500">Choose your course and get a personalized learning roadmap from our experts.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center group hover:border-orange-500 transition-all">
+                    <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Practical Learning</h3>
+                    <p class="text-sm text-gray-500">Engage in 100% practical training in our modern labs with real-world projects.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center group hover:border-green-500 transition-all">
+                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Skill Validation</h3>
+                    <p class="text-sm text-gray-500">Complete assessments and gain the confidence to handle professional software.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center group hover:border-purple-500 transition-all">
+                    <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Certification</h3>
+                    <p class="text-sm text-gray-500">Receive your professional certificate and step into your career with vision.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+
+<div id="about" class="page py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center uppercase tracking-widest">About Us</h2>
+        
+        <div class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                <i class="fas fa-camera text-orange-500"></i> Life at Trinetra (Swipe/Scroll)
+            </h3>
+            <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 pb-4">
+                <div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMK5JnALYP42Cic-Sqau9AJxdomOKaDqj63XcEw=w1200-h1976-p-k-no" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOIFBx3SpWny8_3mmlEAoUlpToC3Nq0ckUZdsYw=w1200-h969-p-k-no" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipP1gM1RmAb-3yKkacgn4wzSUMsuOyg1kP93u_GU=w1200-h1301-p-k-no" class="w-full h-full object-cover">
+                </div>
+ 		<div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOCMw10p8ON89beOraTTBoff_ZIVkggOOmXfPuZ=w1200-h1976-p-k-no" class="w-full h-full object-cover">
+                </div> 
+		<div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNNV7NnJ2qHo4HyrFekwN2PMRNZDE2ytdIxIOy7=w1200-h1976-p-k-no" class="w-full h-full object-cover">
+                </div> 
+		<div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPQpjdxXxIHw27B90FaoLaUtCTP5ACLg12TLjHh=w1200-h969-p-k-no" class="w-full h-full object-cover">
+                </div> 
+		<div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPxgpEAeFPR9UcI6VaoOjvkE3398eX4PNXQjp_i=w1200-h969-p-k-no" class="w-full h-full object-cover">
+                </div>
+		<div class="flex-shrink-0 w-[85%] md:w-1/2 snap-center rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-white">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPIJRwA_tdkm1hvckNisr1-JIABcKyZClgWGUNn=w1200-h969-p-k-no" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+            
+<div>
+<section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="bg-blue-900 rounded-[4rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
+            
+            <div class="md:w-1/3 bg-gray-200 relative min-h-[400px]">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMLspR0shqzKKtcQPK7dQcvIB-MDoAn8Z83cixD=w1200-h1976-p-k-no?auto=format&fit=crop&q=80" 
+                     alt="Founder" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                <div class="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20">
+                    <p class="text-white font-bold">Neetu Verma</p>
+                    <p class="text-blue-200 text-xs">Founder & Director</p>
+                </div>
+            </div>
+
+            <div class="md:w-2/3 p-12 md:p-20 flex flex-col justify-center">
+                <i class="fas fa-quote-left text-5xl text-orange-500/30 mb-6"></i>
+                <h2 class="text-3xl font-black text-white mb-6">A Message from the <span class="text-orange-500">Founder</span></h2>
+                
+                <div class="space-y-4 text-blue-100 leading-relaxed italic">
+                    <p>
+                        "When I started Trinetra Academy, my vision was clear: I wanted to stop the 'degree-only' culture in our city. I saw brilliant students struggling for jobs because they lacked practical skills."
+                    </p>
+                    <p>
+                        "At Trinetra, we don't just teach software; we teach a mindset. We focus on the 'why' and the 'how' so that our students are ready to solve real problems on Day 1 of their jobs."
+                    </p>
+                </div>
+
+                <div class="mt-10">
+                    <p class="text-white font-bold text-lg">Neetu Verma </p>
+                    <p class="text-orange-500 text-sm font-bold tracking-widest uppercase">Skilling Rohtak Since 2012</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+        </div>
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                <i class="fas fa-microchip text-2xl text-orange-600 group-hover:text-white"></i>
+            </div>
+            <h4 class="text-xl font-bold text-blue-900 mb-4">Practical DNA</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">No blackboards. Every lesson is taught on live software used by top MNCs today.</p>
+        </div>
+
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-900 transition-colors">
+                <i class="fas fa-headset text-2xl text-blue-600 group-hover:text-white"></i>
+            </div>
+            <h4 class="text-xl font-bold text-blue-900 mb-4">Lifetime Mentorship</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Once a Trinetra student, always a Trinetra student. Get career help even years after graduating.</p>
+        </div>
+
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all group">
+            <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                <i class="fas fa-briefcase text-2xl text-green-600 group-hover:text-white"></i>
+            </div>
+            <h4 class="text-xl font-bold text-blue-900 mb-4">Placement Cell</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Our dedicated team works with local industries to get you interviewed and hired.</p>
+        </div>
+    </div>
+</section>
+
+<div>
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-black text-blue-900 text-center mb-12">Life at <span class="text-orange-500">Trinetra</span></h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="bg-white p-3 pb-10 shadow-xl border border-gray-100 -rotate-3 hover:rotate-0 transition-transform cursor-pointer">
+                <div class="w-64 h-48 bg-gray-200 overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <p class="text-center font-bold text-gray-400 text-sm">Lab Practice Session</p>
+            </div>
+            <div class="bg-white p-3 pb-10 shadow-xl border border-gray-100 rotate-2 hover:rotate-0 transition-transform cursor-pointer">
+                <div class="w-64 h-48 bg-gray-200 overflow-hidden mb-4">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipP_Rc1bgD1EocOpeqTI48uuXdxiu_OsKIcnIDC6=w1200-h1976-p-k-no?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <p class="text-center font-bold text-gray-400 text-sm">Certification Day 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<div>
+<div id="demoBar" class="fixed bottom-0 left-0 w-full bg-blue-900 p-4 z-[99] border-t-4 border-orange-500 transform translate-y-full transition-transform duration-500">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-white font-medium text-sm text-center md:text-left">
+            <span class="bg-orange-500 text-white px-2 py-1 rounded text-[10px] font-black mr-2">FREE</span> 
+            Want to see how we teach? Attend a <span class="text-orange-400 font-bold">Free Demo Class</span> this Monday!
+        </p>
+        <div class="flex gap-4">
+            <button onclick="showPage('contact')" class="bg-white text-blue-900 px-6 py-2 rounded-xl font-bold text-sm">Book My Seat</button>
+            <button onclick="document.getElementById('demoBar').classList.add('translate-y-full')" class="text-white/50 text-xs">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Show the bar 5 seconds after the page loads
+setTimeout(() => {
+    document.getElementById('demoBar').classList.remove('translate-y-full');
+}, 5000);
+</script>
+</div> 
+   </div>
+
+
+
+
+
+<div id="courses" class="page py-20 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-blue-900 mb-4">Explore Our Programs</h2>
+        <p class="text-gray-500">Industry-recognized certifications to fast-track your career.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 border-t-4 border-t-purple-600 flex flex-col h-full">
+            <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                <i class="fas fa-graduation-cap text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Master Diplomas</h3>
+            <div class="space-y-3 text-sm text-gray-600 mb-8 flex-grow">
+                <p class="flex items-center"><i class="fas fa-check text-purple-500 mr-2"></i> ADCAP (1 Year)</p>
+                <p class="flex items-center"><i class="fas fa-check text-purple-500 mr-2"></i> ADCA (1 Year)</p>
+                <p class="flex items-center"><i class="fas fa-check text-purple-500 mr-2"></i> ADCL & ATC</p>
+                <p class="flex items-center"><i class="fas fa-check text-purple-500 mr-2"></i> DTP (Design)</p>
+            </div>
+            <button onclick="showPage('admission')" class="w-full py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-colors shadow-lg shadow-purple-100">
+                Enroll Now
+            </button>
+        </div>
+
+        <div class="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 border-t-4 border-t-emerald-600 flex flex-col h-full">
+            <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                <i class="fas fa-file-invoice-dollar text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Accounts & Tally</h3>
+            <div class="space-y-3 text-sm text-gray-600 mb-8 flex-grow">
+                <p class="font-bold text-emerald-700">Tally Prime (1, 2(basic), 5(advance), 6(professional) Months)</p>
+                <p class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Basic & Advance Busy</p>
+                <p class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> Manual Accounts</p>
+                <p class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i> GST Reports</p>
+            </div>
+            <button onclick="showPage('admission')" class="w-full py-3 bg-emerald-600 text-white rounded-xl font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-100">
+                Enroll Now
+            </button>
+        </div>
+
+        <div class="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 border-t-4 border-t-blue-600 flex flex-col h-full">
+            <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <i class="fas fa-code text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Coding & AI</h3>
+            <div class="space-y-3 text-sm text-gray-600 mb-8 flex-grow">
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-blue-50 px-2 py-1 rounded">Python</span>
+                    <span class="bg-blue-50 px-2 py-1 rounded">Java</span>
+                    <span class="bg-blue-50 px-2 py-1 rounded">C++</span>
+                </div>
+                <p class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> HTML, CSS & SQL</p>
+                <p class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Digital Marketing</p>
+                <p class="flex items-center text-blue-700 font-bold"><i class="fas fa-robot mr-2"></i> AI Tools & SQL</p>
+            </div>
+            <button onclick="showPage('admission')" class="w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-100">
+                Enroll Now
+            </button>
+        </div>
+
+        <div class="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 border-t-4 border-t-orange-600 flex flex-col h-full">
+            <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                <i class="fas fa-desktop text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Office & Graphics</h3>
+            <div class="space-y-3 text-sm text-gray-600 mb-8 flex-grow">
+                <p class="flex items-center"><i class="fas fa-check text-orange-500 mr-2"></i> Basic & Advance computer</p>
+                <p class="flex items-center"><i class="fas fa-check text-orange-500 mr-2"></i> Basic & Advance Excel</p>
+                <p class="flex items-center"><i class="fas fa-check text-orange-500 mr-2"></i> MS Word & PowerPoint</p>
+                <p class="flex items-center"><i class="fas fa-check text-orange-500 mr-2"></i> Photoshop & CorelDraw</p>
+                <p class="flex items-center"><i class="fas fa-check text-orange-500 mr-2"></i> PageMaker</p>
+                <p class="flex items-center"><i class="fas fa-check text-orange-500 mr-2"></i> Canva</p>
+            </div>
+            <button onclick="showPage('admission')" class="w-full py-3 bg-orange-600 text-white rounded-xl font-bold hover:bg-orange-700 transition-colors shadow-lg shadow-orange-100">
+                Enroll Now
+            </button>
+        </div>
+    </div>
+
+<div>
+<section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-black text-blue-900 mb-4">Which Path is <span class="text-orange-500">Right for You?</span></h2>
+            <p class="text-gray-500">Compare our top programs and choose your future.</p>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="p-6 text-left bg-gray-50 rounded-tl-3xl text-gray-400 uppercase text-xs tracking-widest">Key Features</th>
+                        <th class="p-6 text-center bg-blue-50 text-blue-900 font-black text-xl">Tally Prime</th>
+                        <th class="p-6 text-center bg-orange-50 rounded-tr-3xl text-orange-600 font-black text-xl">Digital Marketing</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm">
+                    <tr class="border-b border-gray-100">
+                        <td class="p-6 font-bold text-gray-700">Best For</td>
+                        <td class="p-6 text-center text-gray-600">Accounting & Finance Lovers</td>
+                        <td class="p-6 text-center text-gray-600">Creative & Social Media Minds</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-6 font-bold text-gray-700">Primary Skill</td>
+                        <td class="p-6 text-center text-gray-600">Taxation & GST</td>
+                        <td class="p-6 text-center text-gray-600">Ads, SEO & Content</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-6 font-bold text-gray-700">Job Roles</td>
+                        <td class="p-6 text-center text-gray-600">Accountant, Audit Asst.</td>
+                        <td class="p-6 text-center text-gray-600">Social Media Mgr, SEO Expert</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-6 font-bold text-gray-700">Difficulty</td>
+                        <td class="p-6 text-center">
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-bold">MODERATE</span>
+                        </td>
+                        <td class="p-6 text-center">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold">EASY-START</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 font-bold text-gray-700">Industry Growth</td>
+                        <td class="p-6 text-center">
+                            <div class="flex justify-center text-orange-400 gap-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star text-gray-300"></i></div>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex justify-center text-orange-400 gap-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+            <p class="text-gray-500 italic">Still not sure? Get a free 1-on-1 counseling session.</p>
+            <button onclick="showPage('contact')" class="bg-blue-900 text-white px-8 py-3 rounded-2xl font-bold hover:bg-orange-500 transition-all shadow-lg">
+                Talk to an Expert
+            </button>
+        </div>
+    </div>
+</section>
+</div>
+
+<div>
+<div class="bg-orange-500 py-3 overflow-hidden">
+    <div class="whitespace-nowrap animate-marquee flex gap-12 text-white font-bold uppercase text-sm">
+        <span><i class="fas fa-clock mr-2"></i> Next Tally Prime Batch: Monday (5 Seats Left)</span>
+        <span><i class="fas fa-clock mr-2"></i> Python for Data Science: Starting 1st Feb</span>
+        <span><i class="fas fa-clock mr-2"></i> Digital Marketing Workshop: This Sunday 11 AM</span>
+        <span><i class="fas fa-clock mr-2"></i> Next Tally Prime Batch: Monday (5 Seats Left)</span>
+    </div>
+</div>
+
+<style>
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+    display: inline-flex;
+    animation: marquee 20s linear infinite;
+    width: max-content;
+}
+</style>
+</div>
+<div class="mt-20 bg-gray-900 rounded-[3rem] p-10 text-center overflow-hidden relative border border-white/10">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-[100px] rounded-full"></div>
+    
+    <h3 class="text-white text-2xl font-black mb-2">Visualize Your <span class="text-orange-500">Success</span></h3>
+    <p class="text-gray-400 text-sm mb-8">Type your name to see your future professional certification.</p>
+    
+    <input type="text" id="certNameInput" oninput="updateCertificate()" placeholder="Enter your full name..." 
+        class="bg-white/5 border border-white/20 p-4 rounded-2xl text-white outline-none mb-10 text-center w-full max-w-md focus:ring-2 focus:ring-orange-500 transition-all">
+    
+    <div class="mx-auto max-w-2xl bg-white p-8 md:p-12 rounded-lg shadow-2xl text-left relative border-[12px] border-double border-blue-900">
+        <div class="flex justify-between items-start mb-8">
+            <div class="text-blue-900">
+                <h4 class="font-black text-xl leading-none">TRI<span class="text-orange-500">NETRA</span></h4>
+                <p class="text-[8px] font-bold tracking-widest uppercase">Academy of Excellence</p>
+            </div>
+            <div class="text-right">
+                <p class="text-[8px] font-bold text-gray-400 uppercase">ISO 9001:2015 Certified</p>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h5 class="text-blue-900 font-serif italic text-2xl mb-4">Certificate of Completion</h5>
+            <p class="text-gray-500 text-[10px] uppercase tracking-[0.2em] mb-6">This is to certify that</p>
+            
+            <div id="certNameDisplay" class="text-3xl md:text-5xl font-serif text-blue-900 mb-6 border-b border-gray-100 pb-2 inline-block min-w-[200px]">Your Name</div>
+            
+            <p class="text-gray-600 text-xs leading-relaxed max-w-md mx-auto">
+                Has successfully completed the professional training program in <b>Mastering Tally Prime & Digital Skills</b> 
+                with exceptional performance and project work.
+            </p>
+        </div>
+
+        <div class="mt-12 flex justify-between items-end">
+            <div class="text-center">
+                <div class="w-24 border-b border-gray-300 mb-1"></div>
+                <p class="text-[8px] font-bold text-gray-400 uppercase">Director Signature</p>
+            </div>
+            <div class="w-16 h-16 opacity-20">
+                <i class="fas fa-certificate text-5xl text-blue-900"></i>
+            </div>
+            <div class="text-center">
+                <div class="w-24 border-b border-gray-300 mb-1"></div>
+                <p class="text-[8px] font-bold text-gray-400 uppercase">Date of Issue</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateCertificate() {
+    const name = document.getElementById('certNameInput').value;
+    document.getElementById('certNameDisplay').innerText = name || "Your Name";
+}
+</script>
+</div>
+
+
+    <div id="admission" class="page py-16 px-6">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+        <h2 class="text-3xl font-bold text-blue-900 mb-2 text-center">Join the Academy</h2>
+        <p class="text-gray-500 text-center mb-8">Please enter valid details for admission inquiry.</p>
+        
+        <form action="https://formspree.io/f/mojjplll" method="POST" class="space-y-5">
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
+                <input type="text" name="name" required 
+                    placeholder="Enter your name" 
+                    class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Email Address</label>
+                <input type="email" name="email" required 
+                    placeholder="example@gmail.com" 
+                    class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none invalid:border-red-500 invalid:text-red-600 focus:invalid:ring-red-500">
+                <p class="mt-1 hidden peer-invalid:block text-red-500 text-xs">Please enter a valid email address.</p>
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Phone Number (10 Digits)</label>
+                <input type="tel" name="phone" required 
+                    pattern="[0-9]{10}" 
+                    title="Please enter exactly 10 digits"
+                    placeholder="9876543210" 
+                    class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none invalid:border-red-500 focus:invalid:ring-red-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Select Course</label>
+                <select name="course" required class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                    <option value="">Choose a course...</option>
+                    <option>ADCAP 1 YEAR</option>
+                    <option>ADCA 1 YEAR</option>
+                    <option>Tally Prime</option>
+                    <option>Digital Marketing</option>
+                    <option>ADCL & ATC</option>
+                    <option>DTP (Design)</option>
+                    <option>Basic & Advance Busy</option>
+                    <option>Manual Accounts</option>
+                    <option>GST Reports</option>
+                    <option>Computer language</option>
+                    <option> AI Tools & SQL</option>
+                    <option>Basic & Advance computer</option>
+                    <option>Basic & Advance excel</option>
+                    <option> MS Word & PowerPoint</option>
+                    <option>Photoshop & CorelDraw</option>
+                    <option>PageMaker</option>
+                    <option>Canva</option>
+
+                    </select>
+            </div>
+<div>
+
+        <label class="block text-sm font-bold text-gray-700 mb-1">Your Message</label>
+        <textarea name="Message" rows="4" placeholder="How can we help you? Write your message here..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-none"></textarea>
+    </div>
+            <button type="submit" class="w-full bg-blue-900 text-white font-bold py-4 rounded-xl hover:bg-orange-500 transition-all active:scale-95 shadow-lg shadow-blue-100">
+                Submit Application
+            </button>
+        </form>
+    </div>
+</div>
+
+
+</div>
+   
+
+
+    <div id="contact" class="page py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">Get In Touch</h2>
+                <div class="space-y-4">
+                    <p class="flex items-center text-lg"><i class="fas fa-phone mr-4 text-orange-500"></i> +91 7015782627</p>
+                    <p class="flex items-center text-lg"><i class="fas fa-map-marker-alt mr-4 text-orange-500"></i> Trinetra Academy, Education Hub, (wakilon wali gali) Rohtak, Haryana </p>
+<div class="text-center mt-4">
+    <p class="text-gray-500 text-sm mb-2">Or chat with us directly:</p>
+    <a href="https://wa.me/91 7015782627?text=Hi%20Trinetra%20Academy,%20I%20am%20interested%20in%20joining%20a%20course." 
+   target="_blank" 
+   class="bg-green-500 text-white px-6 py-2 rounded-full inline-flex items-center hover:bg-green-600 transition-all">
+    <i class="fab fa-whatsapp mr-2"></i> Message on WhatsApp
+</a>
+</div>
+                </div>
+            </div>
+            <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
+<a href="https://maps.app.goo.gl/iHTYrPNWLE1qbYcm9" target="_blank" class="mt-4 inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-bold hover:bg-blue-200 transition">
+    <i class="fas fa-directions mr-2"></i> Get GPS Directions
+</a>
+                
+            </div>
+        </div>
+
+<div>
+<section class="py-20">
+    <h2 class="text-3xl font-black text-center text-blue-900 mb-12">Frequently Asked <span class="text-orange-500">Questions</span></h2>
+    <div class="max-w-2xl mx-auto space-y-4">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full p-5 text-left font-bold text-blue-900 flex justify-between items-center">
+                Is the certification government recognized?
+                <i class="fas fa-chevron-down text-gray-400"></i>
+            </button>
+            <div class="hidden p-5 pt-0 text-sm text-gray-500 border-t border-gray-50">
+                Yes, our certifications are ISO 9001:2015 certified and recognized for private and semi-government job applications.
+            </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full p-5 text-left font-bold text-blue-900 flex justify-between items-center">
+                Do you provide weekend batches?
+                <i class="fas fa-chevron-down text-gray-400"></i>
+            </button>
+            <div class="hidden p-5 pt-0 text-sm text-gray-500 border-t border-gray-50">
+                Yes, we have special weekend batches for working professionals and students coming from outside Rohtak.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 text-center">
+    <div class="max-w-3xl mx-auto px-6 bg-white p-12 rounded-[3rem] shadow-xl border border-gray-50 relative overflow-hidden">
+        <i class="fas fa-heart text-red-500/5 absolute -bottom-10 -right-10 text-9xl"></i>
+        
+        <div class="w-16 h-16 bg-orange-100 text-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+            <i class="fas fa-heart"></i>
+        </div>
+        
+        <h2 class="text-3xl font-black text-blue-900 mb-4">Thank You for <span class="text-orange-500">Visiting!</span></h2>
+        <p class="text-gray-500 leading-relaxed mb-8">
+            Whether you are a student starting your journey or a professional looking to upgrade, we are honored to be part of your growth. At <strong>Trinetra Academy</strong>, your success is our biggest reward.
+        </p>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+            <button onclick="showPage('home')" class="text-blue-900 font-bold hover:text-orange-500 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Home
+            </button>
+            <div class="hidden md:block h-4 w-px bg-gray-200"></div>
+            <p class="text-sm font-bold text-gray-400 uppercase tracking-widest italic">See you in class!</p>
+        </div>
+    </div>
+</section>
+
+</div>
+    </div>
+
+<div>
+<footer class="bg-gray-900 pt-20 pb-10 text-gray-400">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="col-span-1 md:col-span-1">
+            <h2 class="text-2xl font-black text-white mb-4">TRI<span class="text-orange-500">NETRA</span></h2>
+            <p class="text-sm leading-relaxed mb-6">Empowering Rohtak's youth with 100% practical skills for the modern job market.</p>
+            <div class="flex gap-4">
+                <a href="https://www.facebook.com/me/" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><i class="fab fa-facebook-f text-white"></i></a>
+                <a href="https://www.instagram.com/trinetra_skills_haryana/?__pwa=1#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><i class="fab fa-instagram text-white"></i></a>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-white font-bold mb-6">Popular Courses</h4>
+            <ul class="space-y-3 text-sm">
+                <li class="hover:text-orange-500 cursor-pointer" onclick="showPage('courses')">Tally Prime Advanced</li>
+                <li class="hover:text-orange-500 cursor-pointer" onclick="showPage('courses')">Digital Marketing</li>
+                <li class="hover:text-orange-500 cursor-pointer" onclick="showPage('courses')">Canva</li>
+                <li class="hover:text-orange-500 cursor-pointer" onclick="showPage('courses')">Computer language</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-white font-bold mb-6">Visit Us</h4>
+            <p class="text-sm mb-2">(wakilon wali gali) Rohtak, Haryana</p>
+            <p class="text-sm mb-2">+91+ 7015782627 </p>
+            <p class="text-sm font-bold text-orange-500">Open: 10 AM - 7 PM</p>
+        </div>
+        <div>
+            <h4 class="text-white font-bold mb-6">Get Updates</h4>
+        <form action="https://formspree.io/f/mvzzpypw" method="POST" class="space-y-5">
+
+            <div class="flex bg-white/5 rounded-xl p-1 border border-white/10">
+                <input type="text" placeholder="Email" class="bg-transparent px-4 py-2 w-full outline-none text-white">
+                <button class="bg-orange-500 text-white px-4 py-2 rounded-lg font-bold"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+</footer>
+</div>
+
+
+    <footer class="bg-gray-900 text-gray-400 py-10 px-6 text-center">
+        <p>&copy; 2025 Trinetra Academy | Empowering Minds</p>
+<div>
+
+        <p class="text-center text-white-400 text-sm font-bold uppercase tracking-[0.3em] mb-8">Recognized & Certified By</p>
+        
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity">
+            <div class="flex flex-col items-center group">
+                <div class="w-16 h-16 bg-gray rounded-2xl shadow-sm flex items-center justify-center mb-2 group-hover:shadow-md transition-all">
+                    <i class="fas fa-university text-2xl text-blue-900"></i>
+                </div>
+                <span class="text-[10px] font-black text-white-500 uppercase tracking-tighter">CSC Certified</span>
+            </div>
+
+            <div class="flex flex-col items-center group">
+                <div class="w-16 h-16 bg-gray rounded-2xl shadow-sm flex items-center justify-center mb-2 group-hover:shadow-md transition-all">
+                    <i class="fas fa-certificate text-2xl text-orange-500"></i>
+                </div>
+                <span class="text-[10px] font-black text-white-500 uppercase tracking-tighter">ISO 9001:2015</span>
+            </div>
+
+            <div class="flex flex-col items-center group">
+                <div class="w-16 h-16 bg-gray rounded-2xl shadow-sm flex items-center justify-center mb-2 group-hover:shadow-md transition-all">
+                    <i class="fas fa-gavel text-2xl text-blue-900"></i>
+                </div>
+                <span class="text-[10px] font-black text-white-500 uppercase tracking-tighter">Govt. Registered</span>
+            </div>
+
+            <div class="flex flex-col items-center group">
+                <div class="w-16 h-16 bg-gray rounded-2xl shadow-sm flex items-center justify-center mb-2 group-hover:shadow-md transition-all">
+                    <i class="fas fa-shield-alt text-2xl text-orange-500"></i>
+                </div>
+                <span class="text-[10px] font-black text-white-500 uppercase tracking-tighter">MSME Verified</span>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+    </footer>
+
+
+
+<div id="thankYouPopup" class="fixed inset-0 z-[300] hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white rounded-[3rem] p-10 max-w-sm w-full text-center shadow-2xl">
+        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fas fa-check"></i></div>
+        <h2 class="text-2xl font-black text-blue-900 mb-2">Message Sent!</h2>
+        <p class="text-gray-500 mb-8 text-sm">Thank you for contacting Trinetra Academy. We will call you within 24 hours.</p>
+        <button onclick="closeThankYou()" class="w-full bg-blue-900 text-white font-bold py-4 rounded-2xl">Back to Website</button>
+    </div>
+</div>
+
+
+    <script>
+    // 1. NAVIGATION
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        const target = document.getElementById(pageId);
+        if(target) target.classList.add('active');
+        window.scrollTo(0, 0);
+    }
+
+    // 2. VIDEO LOGIC
+    function playVideo() {
+        const video = document.getElementById('academyVideo');
+        if (video.paused) { video.play(); video.controls = true; document.getElementById('playBtn').style.display = 'none'; }
+    }
+
+    // 3. SCROLL PROGRESS
+    window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        document.getElementById("scrollProgress").style.width = (winScroll / height) * 100 + "%";
+    });
+
+    // 4. AI CHATBOT
+    function toggleChat() { 
+        const chat = document.getElementById('ai-chat');
+        chat.classList.toggle('hidden');
+    }
+
+    function aiReply() {
+        const input = document.getElementById('user-msg');
+        const content = document.getElementById('chat-content');
+        if(!input.value.trim()) return;
+        content.innerHTML += `<div class="bg-blue-900 text-white p-2 rounded-xl self-end mb-2">${input.value}</div>`;
+        const uMsg = input.value; input.value = ''; content.scrollTop = content.scrollHeight;
+        setTimeout(() => {
+            content.innerHTML += `<div class="bg-white p-2 rounded-xl shadow-sm border mb-2">That's great! We have specialized batches for <b>${uMsg}</b> starting this Monday. Would you like a free demo?</div>`;
+            content.scrollTop = content.scrollHeight;
+        }, 1000);
+    }
+
+    // 5. SOCIAL PROOF TOAST
+    function showToast() {
+        const names = ["Rahul", "Priya", "Amit", "Sneha"];
+        const courses = ["Tally Prime", "Digital Marketing", "Python"];
+        const toast = document.createElement('div');
+        toast.className = "fixed bottom-6 left-6 z-[200] bg-white p-4 rounded-2xl shadow-2xl border flex items-center gap-4 animate-bounce";
+        toast.innerHTML = `<div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white"><i class="fas fa-check text-xs"></i></div>
+            <p class="text-[10px] font-bold text-blue-900">${names[Math.floor(Math.random()*names.length)]} joined ${courses[Math.floor(Math.random()*courses.length)]}!</p>`;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 4000);
+    }
+    setInterval(showToast, 20000);
+
+    // 6. FORM & CONFETTI
+    document.getElementById('admissionForm').onsubmit = function() {
+        confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#1e3a8a', '#f97316'] });
+        setTimeout(() => document.getElementById('thankYouPopup').classList.remove('hidden'), 500);
+    };
+
+    function closeThankYou() {
+        document.getElementById('thankYouPopup').classList.add('hidden');
+        showPage('home');
+    }
+</script>
+
+
+
+</body>
+</html>
